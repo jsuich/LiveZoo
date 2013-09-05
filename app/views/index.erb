@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>User Skills and Levels</h1>
+  	<div class="user_profile">
+	  	<% @user = current_user%>
+	  	<%= @user.name%>
+	  	Skills:	<% @proficiencies = @user.proficiencies %>
+				<% @proficiencies.each do |pro| %>
+				<% @skill = Skill.find(pro.skill_id) %>
+				<% @proficiencies = @user.proficiencies %>
+			<h3><%= @skill.name %></h3>
+				<ul> 
+					<li>Years: <%= pro.experience %></li>
+					<li>Education: <%= pro.experience %></li>
+				</ul>
+		<% end %>
+ 
+  	</div>
+</div>
